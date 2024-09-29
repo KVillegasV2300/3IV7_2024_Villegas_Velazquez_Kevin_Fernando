@@ -1,4 +1,4 @@
-Algoritmo CobrarEstacionamiento
+Algoritmo sin_titulo
 	//Definir 
 	Definir horaEntrada, minutoEntrada, horaSalida, minutoSalida Como Real
 	Definir totalHoras, totalMinutos, minutosTotalesDeLaCuenta Como Real
@@ -21,38 +21,29 @@ Algoritmo CobrarEstacionamiento
 	totalHoras = horaSalida - horaEntrada
 	totalMinutos = minutoSalida - minutoEntrada
 	
-	//evaluar casos
-	//si los minutos de salida son menores a las de salida
-	
 	Si totalMinutos < 0 Entonces
-		totalMinutos =+ 60
-		totalHoras =- 1
+		totalMinutos = totalMinutos + 60
+		totalHoras = totalHoras - 1
 	Fin Si
 	
-	//convertir todo a minutos
-	totalMinutos = (totalHoras*60) + totalMinutos
+	//cobro en horas
 	
-	//vamos a calcula el cobro
-	TotalCobro = 0
-	
-	//calcular el cobro por la hora completa
-	
-	Si totalMinutos >= 60 Entonces
-		TotalCobro = TotalCobro + (totalMinutos/60)*15
+	Si totalHoras >= 1 Entonces
+		TotalCobro = TotalCobro + (totalHoras)*15
 	Fin Si
 	
 	//calcular el cobro de cada fraccion
-	minutoRestante = totalMinutos%60
+	minutosTotalesDeLaCuenta = (totalHoras*60) + totalMinutos
+	minutoRestante = minutosTotalesDeLaCuenta%60
 	
 	Si minutoRestante > 0 Entonces
 		fracciones15min = minutoRestante //aqui se obtienen os 15
 		//cobrar cada fraccion
-		TotalCobro = TotalCobro + fracciones15min * 6
+		TotalCobro = TotalCobro + (fracciones15min * 6)/15
 	Fin Si
 	
 	//mostarar la salida
 	Escribir "total minutos " totalMinutos " total horas " totalHoras
 	Escribir "el total a pagar es de: ", TotalCobro, " pesos"
-	
 	
 FinAlgoritmo

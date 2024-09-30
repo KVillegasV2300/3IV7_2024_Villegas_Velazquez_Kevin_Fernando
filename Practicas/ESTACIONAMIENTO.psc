@@ -1,4 +1,4 @@
-Algoritmo sin_titulo
+Algoritmo Estacionamiento
 	//Definir 
 	Definir horaEntrada, minutoEntrada, horaSalida, minutoSalida Como Real
 	Definir totalHoras, totalMinutos, minutosTotalesDeLaCuenta Como Real

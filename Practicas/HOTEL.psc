@@ -79,7 +79,6 @@ Algoritmo RESERVACIONES
 											Escribir "INGRESE EL AÑO DE SALIDA"
 											leer AÑOF[n]
 											Si AÑOF[n] > 0 Entonces
-												//RESTA DE FECHAS
 												AÑOT = AÑOF[n] - AÑOI[n]
 												si AÑOT >= 0 Entonces
 													Escribir "--------------------------------------------------------------"

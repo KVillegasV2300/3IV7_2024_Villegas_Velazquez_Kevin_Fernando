@@ -110,7 +110,7 @@ Algoritmo STOCKS
 				Limpiar Pantalla
 				Escribir "--------------------------------------------------------------"
 				Escribir "Inventario:"
-				Para i = 1 Hasta 10 Con Paso 1 Hacer
+				Para i = 1 Hasta 100 Con Paso 1 Hacer
 					si ID[i] <> "" Entonces
 						Escribir "ID " i " " ID[i] " N " CANTIDAD[i] " C " PRECIO[i] " P "
 					FinSi

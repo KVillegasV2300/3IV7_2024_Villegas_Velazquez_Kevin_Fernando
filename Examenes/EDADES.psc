@@ -9,35 +9,8 @@ Algoritmo EDADES
 	Dimension nFallecimiento[DimensionesLista]
 	Definir nFallecimiento Como Entero
 	
-	//NOMBRES POR DEFAULT
-	nNombre[1] = "PACO"
-	nNacimientos[1] = 2000
-	nFallecimiento[1] = 2012
-	
-	nNombre[2] = "LUIS"
-	nNacimientos[2] = 2001
-	nFallecimiento[2] = 2042
-	
-	nNombre[3] = "CARLOS"
-	nNacimientos[3] = 1960
-	nFallecimiento[3] = 2000
-	
-	nNombre[4] = "PEPE"
-	nNacimientos[4] = 1990
-	nFallecimiento[4] = 2040
-	
-	nNombre[5] = "KEVIN"
-	nNacimientos[5] = 1930
-	nFallecimiento[5] = 2010
-	
-	nNombre[6] = "ELIHU"
-	nNacimientos[6] = 1972
-	nFallecimiento[6] = 2037
-	//
-	
 	ACCION = ""
-	nIndividuos = 0
-	nYear = 0
+	Definir nIndividuos, nYear, nFechas Como Entero
 	
 	Mientras SALIR = Falso Hacer
 		Escribir "--------------------------------------------------------------"
@@ -69,8 +42,36 @@ Algoritmo EDADES
 						Leer nNombre[n]
 						Escribir "Año de nacimiento"
 						Leer nNacimientos[n]
-						Escribir "Año de fallecimiento"
-						Leer nFallecimiento[n]
+						Si nNacimientos[n] >= 0 y nNacimientos[n] <= 1000000000 Entonces
+							Escribir "Año de fallecimiento"
+							Leer nFallecimiento[n]
+							Si nFallecimiento[n] >= 0 y nFallecimiento[n] <= 1000000000 Entonces
+								
+								resta = nFallecimiento[n] - nNacimientos[n] 
+								si resta < 0 Entonces
+									nNombre[n] = ""
+									nNacimientos[n] = 0
+									nFallecimiento[n] = 0
+									i = i - 1
+									Limpiar Pantalla
+									Escribir "La edad es negativa por favor ingrese un numero valido"
+								FinSi
+							SiNo
+								nNombre[n] = ""
+								nNacimientos[n] = 0
+								nFallecimiento[n] = 0
+								i = i - 1
+								Limpiar Pantalla
+								Escribir "Por favor ingrese un numero valido"
+							FinSi
+						SiNo
+							nNombre[n] = ""
+							nNacimientos[n] = 0
+							nFallecimiento[n] = 0
+							i = i - 1
+							Limpiar Pantalla
+							Escribir "Por favor ingrese un numero valido"
+						FinSi
 					FinSi
 				Fin Para
 				Escribir "--------------------------------------------------------------"
@@ -96,49 +97,54 @@ Algoritmo EDADES
 				Limpiar Pantalla
 				Escribir "Ingrese el numero de fechas que desea ingresar"
 				Leer nFechas
-				Para l = 1 Hasta nFechas Con Paso 1 Hacer
-					nVivos = 0
-					Limpiar Pantalla
-					Escribir l "/" nFechas
-					Escribir "--------------------------------------------------------------"
-					Escribir "ingrese el año " l 
-					Leer nYear
-					Escribir "--------------------------------------------------------------"
-					Para i = 1 Hasta DimensionesLista Con Paso 1 Hacer
-						si nNombre[i] <> "" Entonces
-							op = nYear - nNacimientos[i]
-							op2 = nYear - nFallecimiento[i]
-							SI op >= 0 Y op2 <= 0 Entonces
-								nVivos = nVivos + 1
-								Escribir nNombre[i] " " op
-								//EDAD
-								si nVivos == 1 Entonces
-									Ma = op
-									Me = op
-								SiNo
-									si op >= Ma Entonces
+				Si nFechas > 0 y nFechas <= 100000 Entonces
+					Para l = 1 Hasta nFechas Con Paso 1 Hacer
+						nVivos = 0
+						Limpiar Pantalla
+						Escribir l "/" nFechas
+						Escribir "--------------------------------------------------------------"
+						Escribir "ingrese el año " l 
+						Leer nYear
+						Escribir "--------------------------------------------------------------"
+						Para i = 1 Hasta DimensionesLista Con Paso 1 Hacer
+							si nNombre[i] <> "" Entonces
+								op = nYear - nNacimientos[i]
+								op2 = nYear - nFallecimiento[i]
+								SI op >= 0 Y op2 <= 0 Entonces
+									nVivos = nVivos + 1
+									Escribir nNombre[i] " " op
+									//EDAD
+									si nVivos == 1 Entonces
 										Ma = op
+										Me = op
 									SiNo
-										si op <= Me Entonces
-											Me = op
+										si op >= Ma Entonces
+											Ma = op
+										SiNo
+											si op <= Me Entonces
+												Me = op
+											FinSi
 										FinSi
 									FinSi
 								FinSi
 							FinSi
-						FinSi
+						Fin Para
+						Escribir "--------------------------------------------------------------"
+						Escribir "La persona mas joven tiene: " Me
+						Escribir "La persona mas vieja tiene: " Ma
+						Escribir "personas vivas son: " nVivos
+						Escribir "--------------------------------------------------------------"
+						Me = 0
+						Ma = 0
+						Escribir "Presione Enter"
+						Leer tecla
+						Limpiar Pantalla
 					Fin Para
-					Escribir "--------------------------------------------------------------"
-					Escribir "La persona mas joven tiene: " Me
-					Escribir "La persona mas vieja tiene: " Ma
-					Escribir "personas vivas son: " nVivos
-					Escribir "--------------------------------------------------------------"
-					Me = 0
-					Ma = 0
-					Escribir "Presione Enter"
-					Leer tecla
 					Limpiar Pantalla
-				Fin Para
-				Limpiar Pantalla
+				SiNo
+					Limpiar Pantalla
+					Escribir "Ingrese un valor valido"
+				FinSi
 			"SALIR":
 				Limpiar Pantalla
 				SALIR = Verdadero

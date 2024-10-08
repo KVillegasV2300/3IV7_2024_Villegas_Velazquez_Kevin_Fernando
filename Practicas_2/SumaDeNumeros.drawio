@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="Página-1" id="zkFSJFvWcvMY-UgxO3Se">
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-1" target="LNfm-Ek82GvP01mHT2Dd-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="334" y="130" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-2" target="LNfm-Ek82GvP01mHT2Dd-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-2" value="n = 0 como entero&lt;div&gt;suma&amp;nbsp; = 0 como entero&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="314" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-4" target="LNfm-Ek82GvP01mHT2Dd-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-4" value="n = n +1&lt;div&gt;suma = suma + n&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="314" y="390" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-6" target="LNfm-Ek82GvP01mHT2Dd-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="560" />
+              <mxPoint x="250" y="370" />
+              <mxPoint x="374" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-13" value="Falso" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LNfm-Ek82GvP01mHT2Dd-8">
+          <mxGeometry x="-0.201" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-6" target="LNfm-Ek82GvP01mHT2Dd-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-14" value="Verdadero" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="LNfm-Ek82GvP01mHT2Dd-10">
+          <mxGeometry x="-0.1" y="3" relative="1" as="geometry">
+            <mxPoint x="-1" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-6" value="n = 10" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334" y="520" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="LNfm-Ek82GvP01mHT2Dd-9" target="LNfm-Ek82GvP01mHT2Dd-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-9" value="Mostrar suma" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="314" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LNfm-Ek82GvP01mHT2Dd-11" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="334" y="770" width="80" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,21 +1,34 @@
-# numero
+# funcion
+def binarioAnumero(numeroBi):
+    sumaTotal = 0
+    numeroIt = []
+
+    #poner en un string
+    for i in numeroBi:
+        print(type(i))
+        if i == '1' or i == '0':
+            numeroIt.append(int(i))  
+        print(numeroIt)
+
+    #calcular digitos
+    limit = len(numeroIt)
+
+    for i in range(limit):
+        if numeroIt[i] == 1:
+            sumaTotal += 2**(limit-(i+1))
+            print(sumaTotal)
+    
+    
+    print("el numero decimal es: ", sumaTotal)
 
 
-sumaTotal = 0
 numeroBi = ""
-numeroIt = []
-
-#programa
-
 numeroBi = str(input("Ingrese el numero binario "))
 
-#poner en un string
-for i in numeroBi:
-    numeroIt.append(i)
+binarioAnumero(numeroBi)
 
-#calcular digitos
-for i  in range(len(numeroBi)):
-    if numeroIt[i] == "1":
-        sumaTotal += 2**(len(numeroBi)-(i+1))
 
-print("el numero decimal es: ", sumaTotal)
+
+
+
+

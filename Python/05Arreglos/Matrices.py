@@ -10,6 +10,7 @@ def ingresar_matriz(n):
             valor = float(input(f"Elemento: [{i+1}][{j+1}]: "))
             fila.append(valor)
         matriz.append(fila)
+    print(matriz)
     return matriz
 
 def sumar_matriz(matriz1,matriz2,n):

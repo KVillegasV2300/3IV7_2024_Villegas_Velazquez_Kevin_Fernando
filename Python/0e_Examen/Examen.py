@@ -40,15 +40,15 @@ def cargar_datos(): #leer y append
                     e = partes[7]
                     nombres = list(map(str, partes[8:]))
                     tama ={
-                        "ID": ID,                
-                        "n": n,        
-                        "nm": nm,                    
-                        "y": y,              
-                        "pa": pa,       
-                        "pi": pi,              
-                        "t": t,              
-                        "e": e,                
-                        "nombres": nombres
+                        "ID": ID,                #ID EN EL SISTEMA
+                        "n": n,                  #NOMBRE DEL MODELO
+                        "nm": nm,                #NUMERO DE BOTONES    
+                        "y": y,                  #AÑO DE LANZAMIENTO
+                        "pa": pa,                #TIPO DE PANTALLA
+                        "pi": pi,                #TIPO DE PILA
+                        "t": t,                  #TAMAÑO
+                        "e": e,                  #EDICION
+                        "nombres": nombres       #NOMBRES DE MASCOTAS
                     }
                     tamagotchis.append(tama)
                 
@@ -82,7 +82,7 @@ def registrar_tamagotchi():
 
     nombres=[]
     #vamos a solicitar a 3 calificaciones
-    for i in range(1,4):
+    for i in range(1,5):
         colorestamagotchi = simpledialog.askstring("REGISTRO",f"Ingrese el nombre {i} : ")
         nombres.append(colorestamagotchi)
         #definir al alumno
@@ -193,7 +193,7 @@ def eliminar_tamagotchi():
     return
     
 def imagen():
-    image = Image.open("Python/05Listas/tm.png")
+    image = Image.open("Python/0e_examen/tm.png")
  
     # Resize the image using resize() method
     resize_image = image.resize((190, 180))
@@ -209,6 +209,7 @@ def imagen():
 def main():
     global root
     root = Tk()
+    root.title("Tamagotchis")
     root.geometry("500x310")
     root.resizable(False, False)
     #encabezado

@@ -9,7 +9,6 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox, simpledialog
-from PIL import Image, ImageTk                  #pip install pillow
 import os
 
 #primero vamos a crear una lista de alumnos
@@ -19,7 +18,7 @@ tamagotchis = []
 
 ARCHIVO = "tm.txt"
 
-#vamos a crear una funcion para cargar datos (escribir)
+#vamos a crear una funcion para cargar datos
 def cargar_datos(): #leer y append
     if os.path.exists(ARCHIVO):
         with open(ARCHIVO, "r") as f:
@@ -58,7 +57,7 @@ def guardar_datos():
         for tm in tamagotchis:
             f.write(f"{tm['ID']}, {tm['n']}, {tm['nm']}, {tm['y']}, {tm['pa']}, {tm['pi']}, {tm['t']}, {tm['e']}, {','.join(map(str,tm['nombres']))} \n")
 
-cargar_datos()
+cargar_datos() #cargar datos
 
 #vamos a crear una funcion que se encargue de registrar un alumno
 
@@ -100,7 +99,7 @@ def registrar_tamagotchi():
     }
 
     tamagotchis.append(tamagotchi)
-    guardar_datos()
+    guardar_datos() #guardar datos
     messagebox.showinfo("EXITO","El tamagotchi se ha registrado exitosamente")
             
 
@@ -192,19 +191,6 @@ def eliminar_tamagotchi():
     messagebox.showinfo("Missing",f"No se encontro el tamagotchi con id {b_id}")
     return
     
-def imagen():
-    image = Image.open("Python/0e_examen/tm.png")
- 
-    # Resize the image using resize() method
-    resize_image = image.resize((190, 180))
-    
-    img = ImageTk.PhotoImage(resize_image)
- 
-    # create label and add resize image
-    label1 = Label(image=img)
-    label1.image = img
-    label1.place(x=350,  rely=0.4)
-
 
 def main():
     global root
@@ -213,7 +199,6 @@ def main():
     root.geometry("500x310")
     root.resizable(False, False)
     #encabezado
-    imagen()
     titulo_label = Label(root, text="Tamagotchis", font=("Arial", 24, "bold"), bg="#6366E0", fg="white")
     titulo_label.pack(fill="x")
 

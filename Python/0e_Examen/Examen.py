@@ -56,7 +56,7 @@ def cargar_datos(): #leer y append
 def guardar_datos():
     with open(RUTA, "w") as f:
         for tm in tamagotchis:
-            f.write(f"{tm['ID']}, {tm['n']}, {tm['nm']}, {tm['y']}, {tm['pa']}, {tm['pi']}, {tm['t']}, {tm['e']}, {','.join(map(str,tm['nombres']))} \n")
+            f.write(f"{tm['ID']},{tm['n']},{tm['nm']},{tm['y']},{tm['pa']},{tm['pi']},{tm['t']},{tm['e']},{','.join(map(str,tm['nombres']))}\n")
 
 cargar_datos() #cargar datos
 
@@ -83,8 +83,8 @@ def registrar_tamagotchi():
 
     nombres=[]
     #vamos a solicitar a 4 nombres
-    for i in range(0,3):
-        colorestamagotchi = simpledialog.askstring("REGISTRO",f"Ingrese el nombre {i} : ")
+    for i in range(0,4):
+        colorestamagotchi = simpledialog.askstring("REGISTRO",f"Ingrese el nombre {i+1} : ")
         nombres.append(colorestamagotchi)
         #definir al alumno
     
@@ -190,9 +190,9 @@ def editar_tamagotchi() :
             tm["t"] = simpledialog.askstring(f"{tm["n"]}","Tamaño o presiona enter para mantener el actual: ") or tm["t"]
             tm["e"] = simpledialog.askstring(f"{tm["n"]}","Edicion o presiona enter para mantener el actual: ") or tm["e"]
 
-            #editar calificacion
-            for i in range(0,3):
-                nuevo_nombre = simpledialog.askstring(f"EDITAR",f"Ingresel nombre {i} del tamagotchi o presione enter para mantener el actual:")
+            #editar la evolucion
+            for i in range(0,4):
+                nuevo_nombre = simpledialog.askstring(f"EDITAR",f"Ingresel nombre {i+1} del tamagotchi o presione enter para mantener el actual:")
                 if nuevo_nombre:
                     tm["nombres"][i] = nuevo_nombre
             guardar_datos()

@@ -9,19 +9,20 @@
 import tkinter as tk
 from tkinter import *
 from tkinter import messagebox, simpledialog
+from tkinter import ttk #creacion de tablas
 import os
 
-#primero vamos a crear una lista de alumnos
+#primero vamos a crear una lista de tamagotchis
 tamagotchis = []
 
 #vamos a colocar los datos en un txt :0
-
 ARCHIVO = "tm.txt"
+RUTA = os.path.join( "Python" ,"0e_Examen", ARCHIVO) #sirve para establecer la ruta de nuestro archivo
 
 #vamos a crear una funcion para cargar datos
 def cargar_datos(): #leer y append
-    if os.path.exists(ARCHIVO):
-        with open(ARCHIVO, "r") as f:
+    if os.path.exists(RUTA):
+        with open(RUTA, "r") as f:
             for lineas in f:
                 #que voy a obtener por cada linea
                 #es un metodo de cadena que nos ayuda a eliminar espacios al incio y al final de una cadena " habia  "
@@ -53,13 +54,13 @@ def cargar_datos(): #leer y append
                 
 #vamos a crear la funcion para guardar los datos
 def guardar_datos():
-    with open(ARCHIVO, "w") as f:
+    with open(RUTA, "w") as f:
         for tm in tamagotchis:
             f.write(f"{tm['ID']}, {tm['n']}, {tm['nm']}, {tm['y']}, {tm['pa']}, {tm['pi']}, {tm['t']}, {tm['e']}, {','.join(map(str,tm['nombres']))} \n")
 
 cargar_datos() #cargar datos
 
-#vamos a crear una funcion que se encargue de registrar un alumno
+#vamos a crear una funcion que se encargue de registrar un tamagotchi
 
 #funciones
 def registrar_tamagotchi():
@@ -71,6 +72,7 @@ def registrar_tamagotchi():
             messagebox.showinfo("ERROR","El tamagotchi ya EXISTE")
             return
     
+    #simple dialog con el registro
     nombre = simpledialog.askstring("REGISTRO","Ingresa el nombre del tamagotchi: ")
     numeroM = int(simpledialog.askstring("REGISTRO","Ingresa el numero de botones disponibles: "))
     feclan = simpledialog.askstring("REGISTRO","Ingresa la fecha de lanzamiento: ")
@@ -80,8 +82,8 @@ def registrar_tamagotchi():
     edicion = simpledialog.askstring("REGISTRO","Ingrese el tipo de edicion del tamagotchi")
 
     nombres=[]
-    #vamos a solicitar a 3 calificaciones
-    for i in range(1,5):
+    #vamos a solicitar a 4 nombres
+    for i in range(0,3):
         colorestamagotchi = simpledialog.askstring("REGISTRO",f"Ingrese el nombre {i} : ")
         nombres.append(colorestamagotchi)
         #definir al alumno
@@ -103,7 +105,7 @@ def registrar_tamagotchi():
     messagebox.showinfo("EXITO","El tamagotchi se ha registrado exitosamente")
             
 
-#funcion para consultar los datos del arreglo de alunos (lista)
+#funcion para consultar los datos 
 
 def consultar_tamagotchi():
     if not tamagotchis:
@@ -112,22 +114,47 @@ def consultar_tamagotchi():
         #creamos ventana de consulta
         ventana_consultar = tk.Toplevel(root)
         ventana_consultar.title("Consultar_tamagotchis")
-        ventana_consultar.resizable(False, False)
+        #ventana_consultar.resizable(False, False)
         
         #ventana_consultar.geometry("400x300")
         ventana_consultar.configure(bg="#E6FFE6")
-        #insertar widget de texto
-        consulta = Text(ventana_consultar)
-        consulta.pack()
+        
+        #establecemos el tamaño y ancho
+        tabla = ttk.Treeview(ventana_consultar, columns=("col1","col2","col3","col4","col5","col6","col7","col8"))
+        tabla.column("#0", width=80, anchor=CENTER)
+        tabla.column("col1", width=300, anchor=CENTER)
+        tabla.column("col2", width=80, anchor=CENTER)
+        tabla.column("col3", width=80, anchor=CENTER)
+        tabla.column("col4", width=80, anchor=CENTER)
+        tabla.column("col5", width=80, anchor=CENTER)
+        tabla.column("col6", width=80, anchor=CENTER)
+        tabla.column("col7", width=80, anchor=CENTER)
+        tabla.column("col8", width=300, anchor=CENTER)
 
+        #establecemos el texto de cada columna
+        tabla.heading("#0", text="ID", anchor=CENTER)
+        tabla.heading("col1", text="Nombre", anchor=CENTER)
+        tabla.heading("col2", text="N. Botones", anchor=CENTER)
+        tabla.heading("col3", text="Año de L.", anchor=CENTER)
+        tabla.heading("col4", text="Tipo de pantalla", anchor=CENTER)
+        tabla.heading("col5", text="Tipo de pila", anchor=CENTER)
+        tabla.heading("col6", text="Tamaño", anchor=CENTER)
+        tabla.heading("col7", text="Edicion", anchor=CENTER)
+        tabla.heading("col8", text="Evoluciones", anchor=CENTER)
+
+        #insertamos cada tamagotchi en en la tabla
         for tm in tamagotchis:
-            consulta.insert(END, f"ID: {tm["ID"]} \n Nombre: {tm["n"]}, Numero de botones: {tm["nm"]}, Año de lanzamiento: {tm["y"]}, Tipo de pantalla: {tm["pa"]}, Tipo de pila: {tm["pi"]}, Tamaño: {tm["t"]}, Edicion: {tm["e"]}, nombres: {tm["nombres"]}\n\n")
-        consulta.config(state=tk.DISABLED)
+            tabla.insert("", END, text=f"{tm["ID"]}", values=(tm["n"], tm["nm"], tm["y"], tm["pa"], tm["pi"], tm["t"], tm["e"], f"{tm["nombres"]}"))
+
+        tabla.pack()
+
         salir = Button(ventana_consultar, text="salir", command=lambda: ventana_consultar.destroy(), width=30, bg="#B6A4E0")
         salir.pack(pady=20)
 
+
 def buscar_tamagotchi():
     b_id = simpledialog.askstring("BUSCAR","Ingrese el id del tamagotchi que desea editar")
+    
     for tm in tamagotchis:
         if tm["ID"] == b_id:
             #creamos ventana de consulta
@@ -149,7 +176,7 @@ def buscar_tamagotchi():
     #si no se encuentra
     messagebox.showinfo("Missing",f"No se encontro el tamagotchi con id {b_id}")
 
-#funcion para editar por boleta
+#funcion para editar por id
 def editar_tamagotchi() :
     b_id = simpledialog.askstring("EDITAR","Ingrese el id del tamagotchi que desea editar")
 
@@ -164,7 +191,7 @@ def editar_tamagotchi() :
             tm["e"] = simpledialog.askstring(f"{tm["n"]}","Edicion o presiona enter para mantener el actual: ") or tm["e"]
 
             #editar calificacion
-            for i in range(1,4):
+            for i in range(0,3):
                 nuevo_nombre = simpledialog.askstring(f"EDITAR",f"Ingresel nombre {i} del tamagotchi o presione enter para mantener el actual:")
                 if nuevo_nombre:
                     tm["nombres"][i] = nuevo_nombre
@@ -176,7 +203,7 @@ def editar_tamagotchi() :
     messagebox.showinfo("Missing",f"No se encontro el tamagotchi con id {b_id}")
         
 
-#funcion para eliminar por boleta
+#funcion para eliminar por id
 
 def eliminar_tamagotchi():
     b_id = simpledialog.askstring("ELIMINAR","Ingrese el id del tamagotchi que desea eliminar")

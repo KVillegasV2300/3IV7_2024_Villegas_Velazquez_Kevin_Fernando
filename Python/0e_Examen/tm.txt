@@ -1,0 +1,30 @@
+001,     Tamagotchi Original,     3,     1996,     LCD,     Boton,     normal,     n/a,     Mametchi,Ginjirotchi,Maskutchi,Kuchipatchi 
+002,     Tamagotchi Umino,     4,     1998,     LCD,     Boton,     normal,     tematico,     Kingyotchi,Otototchi,Kawauso,Merikotchi 
+003,     Tamagotchi Morino,     4,     1997,     LCD,     Boton,     normal,     tematico,     FutagoAritchi,Tentotchi,Chobitamatchi,Minotchi 
+004,     Tamagotchi Angel,     3,     1998,     LCD,     Boton,     normal,     tematico,     Kuriten,Taraten,Okuten,Futagotenshi 
+005,     Tamagotchi Devil,     3,     1998,     LCD,     Boton,     normal,     tematico,     Akuma,Deviltchi,Pazdevil,Devidog 
+006,     Tamagotchi Connection V1,     3,     2004,     LCD,     Boton,     normal,     n/a,     Mametchi,Kuchipatchi,Memetchi,Tarakotchi 
+007,     Tamagotchi Connection V2,     3,     2004,     LCD,     Boton,     normal,     n/a,     Androtchi,Bill,Dorotchi,Pyonkotchi 
+008,     Tamagotchi Connection V3,     3,     2006,     LCD,     Boton,     normal,     n/a,     Violetchi,Kurokotchi,Mimitchi,Pyonchitchi 
+009,     Tamagotchi Music Star,     3,     2008,     LCD,     Boton,     normal,     tematico,     Tensaitchi,Nonopotchi,Sebiretchi,Mimitchi 
+010,     Tamagotchi Color,     3,     2008,     TFT,     Boton,     normal,     n/a,     Mametchi,Memetchi,Kuchipatchi,Lovelitchi 
+011,     Tamagotchi iD,     3,     2009,     TFT,     Boton,     normal,     n/a,     Meloditchi,Chamametchi,KuroMametchi,Sebiretchi 
+012,     Tamagotchi iD L,     3,     2011,     TFT,     Boton,     normal,     n/a,     Himespetchi,Gozarutchi,Meloditchi,Mametchi 
+013,     Tamagotchi P's,     3,     2012,     TFT,     Boton,     normal,     n/a,     Spacytchi,Aokumotchi,Neotchi,Knighttchi 
+014,     Tamagotchi 4U,     3,     2014,     TFT,     Boton,     normal,     n/a,     Smartotchi,Lovelitchi,Righttchi,Orenetchi 
+015,     Tamagotchi 4U+,     3,     2015,     TFT,     Boton,     normal,     n/a,     Yumecantchi,Gorippatchi,Neenetchi,Mametchi 
+016,     Tamagotchi Mix,     3,     2016,     TFT,     Boton,     normal,     tematico,     Mimitchi,Happabouyatchi,Lovelitchi,Mametchi 
+017,     Tamagotchi Meets,     3,     2018,     TFT,     Recargable,     normal,     tematico,     Mametchi,Lovelitchi,Kuchipatchi,Meloditchi 
+018,     Tamagotchi On,     3,     2019,     TFT,     Recargable,     normal,     n/a,     Lovelitchi,Mametchi,Kuchipatchi,Yumecantchi 
+019,     Tamagotchi Pix,     3,     2021,     TFT,     Recargable,     normal,     tematico,     Mametchi,Memetchi,Kuchipatchi,Smartotchi 
+020,     Tamagotchi Smart,     1,     2021,     TFT,     Recargable,     normal,     reloj,     Mametchi,Lovelitchi,Guriguritchi,Pochitchi 
+021,     Tamagotchi Mini,     1,     2005,     LCD,     Boton,     peque�o,     n/a,     Mametchi,Maskutchi,Bill,Kuchipatchi 
+022,     Tamagotchi Plus,     3,     2004,     LCD,     Boton,     normal,     n/a,     Mametchi,Memetchi,Kuchipatchi,Hidatchi 
+023,     Tamagotchi Nano,     2,     2010,     LCD,     Boton,     peque�o,     n/a,     Mametchi,Kuromametchi,Kuchipatchi,Memetchi 
+024,     Tamagotchi Friends,     3,     2013,     LCD,     Boton,     normal,     n/a,     Mametchi,Lovelitchi,Kuchipatchi,Pipospetchi 
+025,     Tamagotchi ON Wonder Garden,     3,     2020,     TFT,     Recargable,     normal,     tematico,     Mametchi,Lovelitchi,Kuchipatchi,Sebiretchi 
+026,     Tamagotchi Meets Fantasy,     3,     2019,     TFT,     Recargable,     normal,     tematico,     Mametchi,Lovelitchi,Meloditchi,Spacytchi 
+027,     Tamagotchi Meets Sweets,     3,     2019,     TFT,     Recargable,     normal,     tematico,     Mametchi,Lovelitchi,Kuchipatchi,Yumecantchi 
+028,     Tamagotchi Meets Pastel,     3,     2018,     TFT,     Recargable,     normal,     tematico,     Mametchi,Kuchipatchi,Meloditchi,Spacytchi 
+029,     Tamagotchi Plus Akai,     3,     2005,     LCD,     Boton,     normal,     tematico,     Mametchi,Memetchi,Kuchipatchi,Bill 
+030,     Tamagotchi School,     3,     2007,     LCD,     Boton,     normal,     tematico,     Mametchi,Memetchi,Kuchipatchi,Ginjirotchi 

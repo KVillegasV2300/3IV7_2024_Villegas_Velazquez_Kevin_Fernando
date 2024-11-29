@@ -1,4 +1,4 @@
-001,Tamagotchi Original,3,1996,LCD,Boton,normal,n/a,Mametchi,Ginjirotchi,Maskutchi,Kuchipatchi
+001,"Tamagotchi; Original",3,1996,LCD,Boton,normal,n/a,Mametchi,Ginjirotchi,Maskutchi,Kuchipatchi
 002,Tamagotchi Umino,4,1998,LCD,Boton,normal,tematico,Kingyotchi,Otototchi,Kawauso,Merikotchi
 003,Tamagotchi Morino,4,1997,LCD,Boton,normal,tematico,FutagoAritchi,Tentotchi,Chobitamatchi,Minotchi
 004,Tamagotchi Angel,3,1998,LCD,Boton,normal,tematico,Kuriten,Taraten,Okuten,Futagotenshi

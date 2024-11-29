@@ -51,7 +51,7 @@ def crear_interfaz(logica_pila, logica_ordenamiento):
         fin = time.time()
         tiempo = fin-inicio
 
-        messagebox.showinfo(f"Metodo {metodo}", f"lista original: {pila} \n lista ordenada: {pila_actual}, \n Tiempo: {tiempo:.7f}")
+        messagebox.showinfo(f"Metodo {metodo}", f"lista original: {pila} \n lista ordenada: {lista_ord}, \n Tiempo: {tiempo:.7f}")
 
     #funciones de la interfaz
     def manejar_apilar():

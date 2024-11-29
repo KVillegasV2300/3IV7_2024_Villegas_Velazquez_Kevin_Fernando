@@ -31,35 +31,33 @@ def insercion(lista):
     return lista 
 
 #merge
-def merge(lista):
-    if(len(lista)>1):
-        mid = len(lista)//2
+def merge_sort(lista):
+    if len(lista) > 1:
+        mid = len(lista) // 2
         izquierda = lista[:mid]
         derecha = lista[mid:]
 
-        #recursivo
-        merge(izquierda)
-        merge(derecha)
+        merge_sort(izquierda)
+        merge_sort(derecha)
 
         i = j = k = 0
-
         while i < len(izquierda) and j < len(derecha):
-            if izquierda[i] < derecha[i]:
+            if izquierda[i] < derecha[j]:
                 lista[k] = izquierda[i]
                 i += 1
             else:
-                lista[k] = derecha[i]
+                lista[k] = derecha[j]
                 j += 1
             k += 1
-        
+
         while i < len(izquierda):
             lista[k] = izquierda[i]
             i += 1
             k += 1
 
-        while i < len(derecha):
-            lista[k] = derecha[i]
-            i += 1
+        while j < len(derecha):
+            lista[k] = derecha[j]
+            j += 1
             k += 1
     return lista
 

@@ -19,7 +19,7 @@ def main():
         "burbuja" : ordenamiento.burbuja,
         "sort" : ordenamiento.selecciom_sort,
         "insercion" : ordenamiento.insercion,
-        "merge" : ordenamiento.merge,
+        "merge" : ordenamiento.merge_sort,
         "quick" : ordenamiento.quick_sort
     }
 

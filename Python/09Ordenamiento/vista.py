@@ -80,12 +80,13 @@ def crear_interfaz(logica_pila, logica_ordenamiento):
         messagebox.showinfo("Limpio", "La lista a sido limpiada")
 
 
+
     def actualizar_pila():
         etiqueta_pila.delete('1.0', END)
+        contador_pila.config(text = f"{len(pila)}/40")
         pila_actual = logica_pila["mostrar_pila"](pila)
         
         etiqueta_pila.insert(END, f"{pila_actual}")
-        contador_pila.config(text = f"{len(pila)}/40")
     
     ventana.mainloop()
     
